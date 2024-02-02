@@ -1,18 +1,26 @@
-def atbash_decodificar(texto):
-    alfabeto = 'abcdefghijklmnopqrstuvwxyz'
-    alfabeto_invertido = alfabeto[::-1]
-    decodificado = '' # De momento el mensaje decodificado está vacío porque no hemos empezado el bucle
-    for caracter in texto:
-        if caracter.lower() in alfabeto:
-            indice = alfabeto.index(caracter.lower())
-            if caracter.isupper():
-                decodificado += alfabeto_invertido[indice].upper()
-            else:
-                decodificado += alfabeto_invertido[indice]
+def cifrado_atbash(texto):
+    alfabeto = "abcdefghijklmnopqrstuvwxyz"
+    resultado = ""
+    
+    for char in texto:
+        if char.isalpha():  # Solo procesa letras, ignora otros caracteres
+            if char.islower():
+                posicion_original = ord(char) - ord('a') + 1
+                posicion_cifrada = 27 - posicion_original
+                resultado += chr(posicion_cifrada - 1 + ord('a'))
+            elif char.isupper():
+                posicion_original = ord(char) - ord('A') + 1
+                posicion_cifrada = 27 - posicion_original
+                resultado += chr(posicion_cifrada - 1 + ord('A'))
         else:
-            decodificado += caracter
-    return decodificado.lower()
+            resultado += char  # Mantiene caracteres no alfabéticos sin cambios
+    
+    return resultado
+
+def descifrado_atbash(texto_cifrado):
+    return cifrado_atbash(texto_cifrado)
 
 mensaje_codificado = "GSVUOZTRHHZBDVZIVXIZAB"
-mensaje_decodificado = atbash_decodificar(mensaje_codificado)
+mensaje_decodificado = descifrado_atbash(mensaje_codificado)
+
 print("Mensaje decodificado:", mensaje_decodificado)
