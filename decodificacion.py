@@ -13,7 +13,6 @@ def atbash_decodificar(texto):
             decodificado += caracter
     return decodificado.lower()
 
-# Ejemplo de uso
 mensaje_codificado = "GSVUOZTRHHZBDVZIVXIZAB"
 mensaje_decodificado = atbash_decodificar(mensaje_codificado)
 print("Mensaje decodificado:", mensaje_decodificado)
