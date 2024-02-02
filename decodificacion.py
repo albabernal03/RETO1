@@ -18,6 +18,7 @@ def cifrado_atbash(texto):
     return resultado
 
 def descifrado_atbash(texto_cifrado):
+    ''' La decodificación es la inversa del cifrado'''
     return cifrado_atbash(texto_cifrado)
 
 mensaje_codificado = "GSVUOZTRHHZBDVZIVXIZAB"
