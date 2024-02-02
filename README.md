@@ -2,7 +2,8 @@
 
 <h2>Repositorio:</h2>
 
-Este es el link del [repositorio]()
+Este es el link del [repositorio](https://github.com/albabernal03/RETO1/tree/main)
+***
 
 El cifrado afín es un tipo de cifrado que usa el mismo alfabeto para el texto plano que para el texto cifrado que utiliza una expresión matemática para determinar la posición en el alfabeto (según el orden normal) del carácter del texto cifrado asociado. En este cifrado la clave viene definida por dos valores numéricos a y b. Sea m el tamaño de alfabeto del texto plano. Para definir qué carácter del alfabeto sustituye a cada carácter se aplica la fórmula:
 
