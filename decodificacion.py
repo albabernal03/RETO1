@@ -1,7 +1,7 @@
 def atbash_decodificar(texto):
     alfabeto = 'abcdefghijklmnopqrstuvwxyz'
     alfabeto_invertido = alfabeto[::-1]
-    decodificado = ''
+    decodificado = '' # De momento el mensaje decodificado está vacío porque no hemos empezado el bucle
     for caracter in texto:
         if caracter.lower() in alfabeto:
             indice = alfabeto.index(caracter.lower())
